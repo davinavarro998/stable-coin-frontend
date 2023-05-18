@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <title>Zekai Stable Coin</title>
+</head>
+
+<body>
+    <header class="header">
+        <div  class="logoContainer">
+            <img class="logoImages" src="https://zekai.foundation/letters/z.svg" alt="" srcset="">
+            <img class="logoImages" src="https://zekai.foundation/letters/e.svg" alt="" srcset="">
+            <img class="logoImages" src="https://zekai.foundation/letters/k.svg" alt="" srcset="">
+            <img class="logoImages" src="https://zekai.foundation/letters/a.svg" alt="" srcset="">
+            <img class="logoImages" src="https://zekai.foundation/letters/i.svg" alt="" srcset="">
+        </div>
+
+        <button id="connectWalletBtn">Connect Wallet</button>
+
+    </header>
+    <main class="container">
+        <div class="buySellContainer">
+            <div class="tokenViewContainer">
+                <p><strong id="ethBalance">Your Balance in FTM</strong> <img style="width: 19px;" src="https://www.svgrepo.com/show/366997/eth.svg" alt=""> </p>
+                <p><strong id="tokenBalance">Your Balance in STBC</strong> <img style="width: 19px;" src="https://www.svgrepo.com/show/291502/dollar.svg" alt=""></p>
+            </div>
+            <form class="buyForm" id="buyForm" >
+                <input  class="inputFields" type="number" name="" min="0" step="0.01" id="amountToBuy" placeholder="Amount to Buy" required>
+                <input id="buyBtn" type="submit" value="Buy">
+            </form>
+            <form class="sellForm" id="sellForm"  >
+                <input class="inputFields" type="number" name="" min="0" step="0.01" id="amountToSell" placeholder="Amount to Sell" required>
+                <input id="sellBtn" type="submit" value="Sell">
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7/web3.min.js"
+        integrity="sha512-yAmmVkOXqtDZRaueLdmLwMB67JtaRtjFzQGiAiJKvLiFlDvq4Tzm5R6uLcOMyvPRQlXpYHdYxc5IbiCwuquhUw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

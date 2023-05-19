@@ -447,6 +447,8 @@ const ABI = [
 ];
  
 const ADDRESS = "0x1eDb285D212B2D7d74e39FE8113EE960653B99cB";
+const anchorToBlockExplorer = document.querySelector("#anchorToBlockExplorer")
+anchorToBlockExplorer.href = `https://testnet.ftmscan.com/address/${ADDRESS}`
 async function main() {
 
     let accountConnected

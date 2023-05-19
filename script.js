@@ -670,20 +670,45 @@ async function getLatestPrice(){
     }
 
 }
-/* getLatestPrice().then((latestPrice) => {
-    console.log(latestPrice)
+async function importToken() {
+  const tokenAddress = ADDRESS;
+  const tokenSymbol = 'STBC';
+  const tokenDecimals = 18;
+  const tokenImage = 'https://zekai.foundation/letters/z.svg';
+  try {
+    await checkForMetamask()
+  } catch (error) {
+    console.log(error)
+  }
+  try {
+    // wasAdded is a boolean. Like any RPC method, an error can be thrown.
+    const wasAdded = await ethereum.request({
+      method: 'wallet_watchAsset',
+      params: {
+        type: 'ERC20', // Initially only supports ERC-20 tokens, but eventually more!
+        options: {
+          address: tokenAddress, // The address of the token.
+          symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 characters.
+          decimals: tokenDecimals, // The number of decimals in the token.
+          image: tokenImage, // A string URL of the token logo.
+        },
+      },
+    });
 
-    let amountFTM
-    let amountSTBC
+    if (wasAdded) {
+      console.log('Thanks for your interest!');
+    } else {
+      console.log('Your loss!');
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+let importTokensBtn = document.createElement("button")
+importTokensBtn.className = "importTokensBtn"
+importTokensBtn.textContent = "Add Token to Metamask"
 
-    let entryValue = 58.07
-
-    amountSTBC = entryValue
-
-    console.log(entryValue/latestPrice)
-    
-    
-    
-}).catch((err) => {
-    
-}); */
+document.querySelector(".container").appendChild(importTokensBtn)
+importTokensBtn.addEventListener("click", () => {
+  importToken()
+})

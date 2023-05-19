@@ -41,7 +41,7 @@ body {
     cursor: pointer;
     border: none;
     border-radius: 2px;
-    color: #fff;
+    color: #000000;
     transition: all 0.2s;
     border-style: solid;
     border-width: 2px;
@@ -74,7 +74,7 @@ body {
     cursor: pointer;
     border: none;
     border-radius: 2px;
-    color: #fff;
+    color: #000000;
     transition: all 0.2s;
     border-style: solid;
     border-width: 2px;
@@ -95,7 +95,7 @@ body {
     cursor: pointer;
     border: none;
     border-radius: 2px;
-    color: #fff;
+    color: #000000;
     transition: all 0.2s;
     border-style: solid;
     border-width: 2px;
@@ -143,7 +143,7 @@ form {
 }
 
 .simple-spinner {
-    
+
     margin-top: 50px;
     width: 30px;
     height: 30px;
@@ -170,6 +170,7 @@ form {
         transform: rotate(360deg);
     }
 }
+
 @media screen and (max-width:460px) {
     form {
         flex-direction: column;
@@ -180,4 +181,26 @@ form {
         margin-bottom: 20px;
     }
 
+}
+
+.importTokensBtn {
+    font-size: 12px;
+    padding: 6px;
+    margin-top: 20px;
+    background-color: #09b43a;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    color: #000000;
+    transition: all 0.2s;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #09b43a;
+    margin-left: 10px;
+}
+
+.importTokensBtn:hover {
+    background-color: #010103;
+    color: #09b43a;
+    box-shadow: 0px 0px 34px 1px #09b43a;
 }
